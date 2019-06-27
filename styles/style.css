@@ -23,6 +23,7 @@
   position: fixed;
   top: 0;
   overflow: visible;
+  font-size: 110px;
 }
 
 #assets > * {
@@ -57,19 +58,42 @@
 
 #likes {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+}
+
+#likes li {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #like {
   width: 20em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20em;
 }
 
 #like section {
-  visibility: hidden;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
 }
 
 #like section.show {
-  visibility: visible;
+  display: block;
+}
+
+#like section > img {
+  width: 90%;
+  margin: 1em auto;
+}
+
+#like section span {
+  white-space: nowrap;
 }

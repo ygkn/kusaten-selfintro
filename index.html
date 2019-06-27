@@ -13,37 +13,43 @@
 
   <body style="overflow: hidden">
     <div id="modal">
-      Show "Y" marker in this screen.
+      マーカーを映してね！
     </div>
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-    >
+    <a-scene embedded arjs>
       <a-marker type="pattern" url="./marker/pattern-y.patt"
         ><a-plane
           height="1"
-          material="shader:html; target: #name; ratio: height; fps: 0.1"
+          material="shader:html; target: #name; ratio: height; fps: 24"
           rotation="-90 0 0"
           position="0 0 1"
         >
         </a-plane
         ><a-plane
           height=".2"
-          material="shader:html; target: #belong; ratio: height; fps: 0.1"
+          material="shader:html; target: #belong; ratio: height; fps: 1"
           rotation="-90 0 0"
           position="0 0 2"
         >
         </a-plane
         ><a-plane
           width="1"
-          material="shader:html; target: #Ilikes; ratio: width; fps: 0.1"
+          material="shader:html; target: #Ilikes; ratio: width; fps: 1"
           rotation="-90 0 0"
-          position="0 0 2.5"
+          position="-1.1 0 2.5"
+        >
+        </a-plane
+        ><a-plane
+          width="3"
+          material="shader:html; target: #like; ratio: width; fps: 10"
+          rotation="-90 0 0"
+          position="-1 0 5"
         >
         </a-plane>
       </a-marker>
 
-      <a-entity camera></a-entity>
+      <a-entity camera>
+        <a-entity cursor="rayOrigin: mouse"> </a-entity
+      ></a-entity>
     </a-scene>
 
     <div id="assets">
@@ -53,10 +59,10 @@
       <p id="belong">
         情報理工学部１回生
       </p>
-      <h2 id="Ilikes">I like...</h2>
+      <h2 id="Ilikes">I like:</h2>
       <ul id="likes">
-        <li>👨‍💻</li>
-        <li>📷</li>
+        <li>💻</li>
+        <li>📸</li>
         <li>📕</li>
         <li>🎥</li>
         <li>🎵</li>
@@ -68,23 +74,31 @@
         </section>
         <section>
           <p>
-            RX100でいろいろ撮る
+            📷 Sony RX100 Mark V
           </p>
-          <p>see photos at Instagram!</p>
+          <p>インスタグラムにあげてます！</p>
         </section>
         <section>
+          <p>小説</p>
           <p>有川浩、森見登美彦、三秋縋 etc...</p>
         </section>
         <section>
           <p>洋画邦画アニメなんでも</p>
-          <p>
-            最近見た映画：プロメア, きみと、波にのれたら, アラジン,
-            名探偵ピカチュウ, ゴジラ キング・オブ・モンスターズ,
-            さよならくちびる
-          </p>
+          <h3>
+            最近見た映画
+          </h3>
+          <img src="./images/cinemas.png" alt="" />
         </section>
         <section>
-          <p></p>
+          <p>J-POPと邦ロック</p>
+          <p>
+            <span>いきものがかり</span>
+            <span>miwa</span>
+            <span>RADWIMPS</span>
+            <span>My Hair is Bad</span>
+            <span>ASIAN KUNG-FU GENERATION NICO</span>
+            <span>Touches the Walls</span>
+          </p>
         </section>
       </div>
     </div>
