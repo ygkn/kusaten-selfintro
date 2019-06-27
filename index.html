@@ -17,7 +17,10 @@
     <div id="modal">
       Show "Y" marker in this screen.
     </div>
-    <a-scene embedded arjs>
+    <a-scene
+      embedded
+      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    >
       <a-marker type="pattern" url="./marker/pattern-y.patt"
         ><a-plane
           height="1"
