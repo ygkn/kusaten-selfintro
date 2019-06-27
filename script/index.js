@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
       "material",
       `shader: html;
        target: #likes > li:nth-child(${i + 1});
-       fps: 1;`
+       fps: 0;`
     );
     like.setAttribute("rotation", "-90 0 0");
     like.setAttribute("position", `${0.7 * i} 0 2.5`);
