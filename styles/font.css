@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap");
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Futura-Med";
+  src: 
+    /* IE6-IE8 */ url("../fonts/Futura-Med.otf") format("opentype"),
+    /* Open Type Font */ url("../fonts/Futura-Med.svg") format("svg"),
+    /* Legacy iOS */ url("../fonts/Futura-Med.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/Futura-Med.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Futura-Med.woff2") format("woff2");
+  font-weight: medium;
+  font-style: normal;
+}

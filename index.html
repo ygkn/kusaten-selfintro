@@ -4,19 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./styles/font.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
-    <script src="https://unpkg.com/aframe-svg-extruder@1.0.2/dist/index.min.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+    <script src="./script/index.js"></script>
     <title>自己紹介</title>
   </head>
 
-  <body style="margin : 0px; overflow: hidden;">
+  <body>
+    <div id="modal">
+      Show "Y" marker in this screen.
+    </div>
     <a-scene embedded arjs>
-      <a-marker type="pattern" url="./marker/pattern-y.patt">
-        <a-box position="0 0.5 0" material="color: yellow;"></a-box>
+      <a-marker type="pattern" url="./marker/pattern-y.patt"
+        ><a-plane
+          height="1"
+          material="shader:html; target: #name; ratio: height; fps: 0.1"
+          rotation="-90 0 0"
+          position="0 0 1"
+        >
+        </a-plane
+        ><a-plane
+          height=".2"
+          material="shader:html; target: #belong; ratio: height; fps: 0.1"
+          rotation="-90 0 0"
+          position="0 0 2"
+        >
+        </a-plane
+        ><a-plane
+          width="1"
+          material="shader:html; target: #Ilikes; ratio: width; fps: 0.1"
+          rotation="-90 0 0"
+          position="0 0 2.5"
+        >
+        </a-plane>
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
+
+    <div id="assets">
+      <h1 id="name">
+        <span>Yugo Yagita</span>
+      </h1>
+      <p id="belong">
+        情報理工学部１回生
+      </p>
+      <h2 id="Ilikes">I like...</h2>
+      <ul id="likes">
+        <li>👨‍💻</li>
+        <li>📷</li>
+        <li>📕</li>
+        <li>🎥</li>
+        <li>🎵</li>
+      </ul>
+      <div id="like">
+        <section>
+          <p>ワクワクするものを作りたい</p>
+          <p>Webフロントエンド（React, TypeScript）</p>
+        </section>
+        <section>
+          <p>
+            RX100でいろいろ撮る
+          </p>
+          <p>see photos at Instagram!</p>
+        </section>
+        <section>
+          <p>有川浩、森見登美彦、三秋縋 etc...</p>
+        </section>
+        <section>
+          <p>洋画邦画アニメなんでも</p>
+          <p>
+            最近見た映画：プロメア, きみと、波にのれたら, アラジン,
+            名探偵ピカチュウ, ゴジラ キング・オブ・モンスターズ,
+            さよならくちびる
+          </p>
+        </section>
+        <section>
+          <p></p>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

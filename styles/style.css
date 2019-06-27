@@ -1,0 +1,83 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#modal {
+  color: #4169e1;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+  border-radius: 0.25em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modal.hidden {
+  display: none;
+}
+
+#assets {
+  font-family: "Futura-Med", "M PLUS 1p", sans-serif;
+  position: absolute;
+  z-index: -99999;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  overflow: visible;
+}
+
+#assets > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  line-height: 1.5;
+  margin: 0;
+  color: black;
+  white-space: nowrap;
+}
+
+#assets * {
+  font-weight: normal;
+}
+
+#name > span {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+#assets.show > #name > span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#Ilikes {
+  margin: 0;
+}
+
+#likes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#like {
+  width: 20em;
+}
+
+#like section {
+  visibility: hidden;
+}
+
+#like section.show {
+  visibility: visible;
+}
