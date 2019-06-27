@@ -23,7 +23,7 @@
   position: fixed;
   top: 0;
   overflow: visible;
-  font-size: 110px;
+  font-size: 3em;
 }
 
 #assets > * {
