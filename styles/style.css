@@ -16,12 +16,13 @@
 #assets {
   font-family: "Futura-Med", "M PLUS 1p", sans-serif;
   position: absolute;
-  /*z-index: -99999;*/
+  z-index: -99999;
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
+  left: 0;
   overflow: visible;
   font-size: 10em;
 }
