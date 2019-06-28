@@ -15,8 +15,12 @@
     <div id="modal">
       マーカーを映してね！
     </div>
-    <a-scene embedded arjs="debugUIEnabled:false;">
-      <a-marker type="pattern" url="./marker/pattern-y.patt"
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+      <a-marker
+        type="pattern"
+        url="./marker/pattern-y.patt"
+        cursor="rayOrigin: mouse"
+        emitevents="true"
         ><a-plane
           height="1"
           material="shader:html; target: #name; ratio: height; fps: 10"
@@ -47,9 +51,7 @@
         </a-plane>
       </a-marker>
 
-      <a-entity camera>
-        <a-entity cursor="rayOrigin: mouse"> </a-entity
-      ></a-entity>
+      <a-entity camera></a-entity>
     </a-scene>
 
     <div id="assets">
